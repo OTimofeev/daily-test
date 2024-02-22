@@ -12,6 +12,7 @@
     "@daily-co/daily-js": "^0.57.4",
     "@daily-co/daily-react": "^0.17.2",
     "better-sqlite3": "^9.3.0",
+    "classnames": "^2.5.1",
     "jotai": "^2.6.4",
     "next": "14.1.0",
     "node-fetch": "^3.3.2",

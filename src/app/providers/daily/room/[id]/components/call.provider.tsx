@@ -2,7 +2,7 @@
 
 import {DailyProvider, useCallObject} from "@daily-co/daily-react";
 import {FC, PropsWithChildren} from "react";
-import {useJoinLeaveCall} from "@/app/room/[id]/components/call.component.hooks";
+import {useJoinLeaveCall} from "@/app/providers/daily/room/[id]/components/call.component.hooks";
 
 
 export type CallProviderProps = {

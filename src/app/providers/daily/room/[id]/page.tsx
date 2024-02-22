@@ -1,9 +1,9 @@
 import React from "react";
-import CallComponent from "@/app/room/[id]/components/call.component";
+import CallComponent from "@/app/providers/daily/room/[id]/components/call.component";
 import {RoomResponse} from "@/utils/clients/daily";
 import ErrorComponent from "@/app/shared/components/error/error.component";
 import {configFromEnv} from "@/utils/config";
-import CallProvider from "@/app/room/[id]/components/call.provider";
+import CallProvider from "@/app/providers/daily/room/[id]/components/call.provider";
 
 type PageProps = {
     params: {
@@ -13,7 +13,7 @@ type PageProps = {
 
 const RoomIndexPage = async ({params: {id}}: PageProps) => {
     const config = configFromEnv(process.env);
-    const roomResponse = await fetch("http://localhost:3000/api", {
+    const roomResponse = await fetch("http://localhost:3000/api/providers/daily", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

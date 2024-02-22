@@ -4,7 +4,7 @@ import {DailyCall} from "@daily-co/daily-js";
 
 export const makeOnDeleteClick = (router: AppRouterInstance, roomName: string) => {
     return async () => {
-        const response = await fetch("http://localhost:3000/api", {
+        const response = await fetch("http://localhost:3000/api/providers/daily", {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -40,4 +40,12 @@ export const useJoinLeaveCall = (daily: DailyCall | null, roomUrl: string) => {
                 .catch(console.error);
         }
     }, [daily, roomUrl]);
+}
+
+export const makeOnCopyClick = (roomUrl: string) => {
+    return () => {
+        navigator.clipboard.writeText(roomUrl)
+            .then(() => console.log('Room URL copied'))
+            .catch(console.error);
+    }
 }
